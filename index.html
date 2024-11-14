@@ -1,0 +1,164 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: grid;
+            justify-content: center;
+           
+        }.container{
+            height:700px;
+            width:800px;
+            background-color: chocolate;
+            border: black 5px solid;
+            display: grid;
+            grid-template-rows: 3fr 5fr 3fr;
+        }
+        .one{
+         background-color: cornflowerblue;
+         display: grid;
+         border-bottom: black 5px solid;
+        }
+        .one-one{
+            background-color: orange;
+            display: grid;
+            justify-content: center;
+        }
+        .one-two{
+            background-color:red;
+            display: grid;
+            justify-content: center;  
+            border-top:black 5px solid;
+            border-bottom: black 5px solid;
+        }
+        .one-three{
+            background-color: green;
+            display: grid;
+            justify-content: center;  
+        }
+        .two{
+        background-color: aquamarine;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        }
+        .three{
+          background-color: blue;
+        }
+        .three{
+         background-color: cornflowerblue;
+         display: grid;
+         grid-template-rows: 1fr 1fr 1fr;
+        }
+        .three-one{
+            background-color: rgb(233, 179, 80);
+            display: grid;
+            justify-content: center;  
+            border-top:black 5px solid;
+            border-bottom: black 5px solid;
+        }
+        .three-two{
+            background-color:rgb(18, 141, 45);
+            display: grid;
+            justify-content: center;  
+            align-items: center;
+            border-bottom: black 5px solid;
+        }
+        .three-three{
+            background-color: rgb(69, 50, 241);
+            display: grid; 
+            justify-content: center;
+            align-items: center;
+        }
+      
+        
+        @media screen and (min-width:580px){
+            .container{
+                display: grid;
+                grid-template-rows: 1fr 9fr 1fr;
+            }
+            .one-two,
+           .one-three,
+          .three-one,
+           .three-two {
+            display: none;
+        }
+        .three-three{
+            border-top:black 5px solid;
+            margin-bottom: -42px;
+        }
+        .two{
+            display: grid;
+           grid-template-columns: 1fr 4fr 1fr;
+        }
+        .two-one{
+            background-color: green;
+            height: 100%;
+        }
+        .two-two{
+            height: 100%;
+            display: grid;
+            grid-template-rows: 1fr 9fr 1fr;
+            border:black 5px solid;
+            text-align: center;
+            
+        }
+        .two-two__one{
+            background-color: red;
+        }
+        .two-two__two{
+            background-color: rgb(70, 70, 231);
+            border-top:black 5px solid;
+            border-bottom:black 5px solid;
+            width: 100%;
+            display: grid;
+            align-items: center;
+        }
+        .two-two__three{
+            background-color: darkgreen;
+           
+            display: grid;
+           
+        }
+        .two-three{
+            background-color: orange;
+            height: 100%;
+            width:20vh;
+        }
+    }
+        @media screen and (max-width:580px){
+        .two-one,.two-three,.two-two__one,.two-two__three{
+            display: none;}
+    
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="one">
+            <div class="one-one"><p>Header</p></div>
+            <div class="one-two"><p>Banner</p></div>
+            <div class="one-three"><p>Left Aside</p></div>
+        </div>
+        <div class="two">
+            <div class="two-one"><p>Left Aside</p></div>
+            <div class="two-two">
+             <div class="two-two__one"><p>Banner</p></div>
+             <div class="two-two__two"><p>Main Content width:948,height873</p></div>
+             <div class="two-two__three"><p>Low Content</p></div>
+            </div>
+            <div class="two-three">Right Aside</div>
+        </div>
+        <div class="three">
+            <div class="three-one"><p>Right Aside</p></div>
+            <div class="three-two"><p>Low Content</p></div>
+            <div class="three-three"><p>Fotter</p></div>
+        </div>
+     </div>
+</body>
+</html>
